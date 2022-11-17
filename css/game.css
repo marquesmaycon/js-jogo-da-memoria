@@ -1,3 +1,27 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 50px;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin-block-end: 10px;
+    border-radius: 7px;
+    background-color: #fff385cc
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -14,10 +38,8 @@
     position: relative;
     transition: all ease .4s;
     transform-style: preserve-3d;
-}
-
-.card:hover {
-    
+    cursor: pointer;
+    background-color: #AAAAAAAA;
 }
 
 .face {
@@ -36,7 +58,7 @@
 }
 
 .back {
-    background-image: url('/images/back.png');
+    background-image: url('/images/card3.jpeg');
     backface-visibility: hidden;
 }
 
