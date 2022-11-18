@@ -8,6 +8,7 @@ main {
     background-image: url('../images/bg.jpg');
     background-size: cover;
     min-height: 100vh;
+    transition: .3s;
 }
 
 header {
@@ -69,4 +70,46 @@ header {
 .disabled_card {
     filter: saturate(0);
     opacity: .5;
+}
+
+#endgame-screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #000;
+    font-size: 28px;
+    background-color: #fff385e8;
+    border-radius: 7px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+#endgame-screen div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#endgame-screen p {
+    margin-block-end: 30px;
+    text-align: center;
+}
+
+#endgame-screen button {
+    background-color: #ff7d6c;
+    color: #FFF;
+    border-radius: 13px;
+    padding: 13px;
+    max-width: 273px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    transition: .3s;
+    margin: .5rem;
+}
+
+#endgame-screen button:hover {
+    transform: scale(1.1);
 }

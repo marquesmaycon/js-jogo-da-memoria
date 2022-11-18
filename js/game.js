@@ -1,8 +1,9 @@
 const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
-const minutes = document.querySelector('.minutes');
-const seconds = document.querySelector('.seconds');
+const endGameScreen = document.querySelector('#endgame-screen');
+const btnHome = document.querySelector('#btn-home');
+const main = document.querySelector('main');
 
 const characters = [
   "beth",
@@ -48,6 +49,11 @@ const loadGame = () => {
     const card = createCard(character);
     grid.appendChild(card);
   });
+
+  endGameScreen.style.display = 'none';
+  grid.style.display = 'grid';
+  timer.innerHTML = '0';
+
 };
 
 let firstCard = "";
@@ -105,10 +111,16 @@ function checkEndGame() {
 
     setTimeout(() => {
 
-      alert('Você ganhou!')
+      endGameScreen.style.display = 'flex';
+      grid.style.display = 'none';
+      grid.innerHTML = '';
       
     }, 500);
   }
+}
+
+function goHome() {
+  window.location = '../index.html';
 }
 
 function startTimer() {
